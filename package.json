@@ -1,0 +1,18 @@
+{
+  "name": "digital-underground",
+  "version": "0.1.0",
+  "description": "All the dev files for generating the digital-underground exhibition theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Bird",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-csso": "^1.0.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-sass": "^2.0.1"
+  }
+}

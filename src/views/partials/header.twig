@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="{{ site.charset }}" />
+    <title>{{ site.title }} | {{ site.description }}</title>
+    <meta name="description" content="{{ site.description}}">
+    <link rel="stylesheet" href="{{ theme.uri }}/css/style.css" charset="utf-8" type="text/css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="pingback" href="{{site.pingback_url}}" />
+    {{ wp_head }}
+  </head>
+  <body>
+  <div class="modal">
+    <div class="modal-title">
+      <h3 class="project-title h3"></h3>
+      <a href="#" class="btn btn--yellow js-urlBtn" target="_blank">Visit Site</a>
+    </div>
+    <div class="modal-content"></div>
+  </div>
+  <div class="overlay"></div>

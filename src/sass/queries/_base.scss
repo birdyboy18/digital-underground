@@ -1,0 +1,569 @@
+//base styles for everything that isn't width specific
+
+/*================================
+COlOURS
+=================================*/
+
+$yellow: #FCED2A;
+$orange: #FFBE7E;
+$turq: #4FDCBC;
+
+/*================================
+GENERAL SETTINGS
+=================================*/
+
+$base-font-family: "Lato", sans-serif;
+$container_max_width: 1020px;
+
+/*================================
+TYPOGRAPHIC SETTINGS
+=================================*/
+
+$base-font-size: 1rem;
+$base-line-height: 1.5rem;
+$measure: 760px; //47.5rem
+
+$h1-font-size: 1rem*1.5*1.5*1.5; //3.375rem
+$h1-line: 1.5rem;
+$h1-lines: 3;
+$h1-line-height: $h1-line * $h1-lines;
+$h1-margin-top: 2 * $h1-line;
+$h1-margin-bottom: 1 * $h1-line;
+
+$h2-font-size: 1rem*1.5*1.5;
+$h2-line: 1.5rem;
+$h2-lines: 2;
+$h2-line-height: $h2-line * $h2-lines;
+$h2-margin-top: 2 * $h2-line;
+$h2-margin-bottom: 1 * $h2-line;
+
+$h3-font-size: 1rem*1.5;
+$h3-line: 1.5rem;
+$h3-lines: 1.5;
+$h3-line-height: $h3-line * $h3-lines;
+$h3-margin-top: 1 * $h3-line;
+$h3-margin-bottom: 1 * $h3-line;
+
+$h4-font-size: 1rem;
+$h4-line: 1.5rem;
+$h4-lines: 1;
+$h4-line-height: $h4-line * $h4-lines;
+$h4-margin-top: 1 * $h4-line;
+$h4-margin-bottom: 1 * $h4-line;
+
+/*================================
+TINY RESET
+=================================*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+body {
+  font-family: $base-font-family;
+}
+
+/*================================
+TYPOGRAPHY
+=================================*/
+
+.h1,.h2,.h3,.h4 {
+  font-weight: 400;
+}
+
+.h1 {
+  padding: 0 0 0 0;
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  margin: $h1-margin-top 0 $h1-margin-bottom 0;
+}
+
+.h2 {
+  padding: 0 0 0 0;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin: $h2-margin-top 0 $h2-margin-bottom 0;
+}
+
+.h3 {
+  padding: 0 0 0 0;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin: $h3-margin-top 0 $h3-margin-bottom 0;
+}
+
+.h4 {
+  padding: 0 0 0 0;
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  margin: $h4-margin-top 0 $h4-margin-bottom 0;
+}
+
+p, ul {
+  padding: 0 0 0 0;
+  margin: $h4-margin-top 0 $h4-margin-bottom 0;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+img {
+  width: auto;
+  height:auto;
+}
+
+/*================================
+SIZE PRIMITIVES & BLOCKS
+=================================*/
+
+.container {
+  width: 100%;
+  max-width: $container_max_width;
+  margin: 0 auto 0 auto;
+  @include clearfix();
+}
+
+.section--padded {
+  padding: 150px 0;
+}
+
+.full {
+  width: columns(12);
+}
+
+.half {
+  width: columns(12);
+}
+
+.third {
+  width: columns(12);
+}
+
+.quarter {
+  width: columns(12);
+}
+
+//Used to contain images
+.media-holder {
+  text-align:center;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/*================================
+LAYOUT HELPERS
+=================================*/
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+/*================================
+BACKGROUND MODIFIERS
+=================================*/
+
+.background--grey {
+  background: #333;
+}
+
+.background--off-white {
+  background: #f9f9f9;
+}
+
+/*================================
+TEXT MODIFIERS
+=================================*/
+
+.text--white {
+  color:#fff;
+}
+
+.text--grey {
+  color:#444;
+}
+
+.text--l_grey {
+  color:#8b8b8b;
+}
+
+/*================================
+BUTTON STYLES
+=================================*/
+
+.btn {
+  padding: 13px 20px;
+  display: inline-block;
+}
+
+.btn--yellow {
+  background:$yellow;
+  color:#333;
+  border-radius: 5px;
+}
+
+.btn--block {
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.btn-3-col {
+    text-align: center;
+    width: columns(3);
+  }
+
+/*================================
+MAIN STYLES
+=================================*/
+
+.hero {
+  width: 100%;
+  min-height: 100%;
+}
+
+.slant-bottom-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.slant-top-right {
+  clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+}
+
+.slant-top-right-slant-bottom-left {
+  clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+}
+
+.logo {
+  width: 485px;
+  pointer-events: none;
+}
+
+.intro {
+  position: absolute;
+  top:45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding-top: 160px;
+
+  p {
+    font-size: 20px;
+    line-height: 1.5em;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn {
+    text-align: center;
+    width: columns(3);
+  }
+}
+
+.absolute-center {
+  position: absolute;
+  top:45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.vertical-left-center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-130%,0);
+}
+
+.vertical-right-center {
+  position: absolute;
+  right: 50%;
+  transform: translate(129%,0);
+}
+
+.redline {
+  top: 33%;
+}
+
+.redline-path {
+  stroke-dasharray: 594;
+  stroke-dashoffset: -594;
+  transition: all 1.8s; 
+  &.draw {
+    stroke-dashoffset: 0;
+  }
+}
+
+.turqline {
+  top: 42%;
+}
+
+.turqline-path {
+  stroke-dasharray: 605;
+  stroke-dashoffset: -605;
+  transition: all 1.5s; 
+  &.draw {
+    stroke-dashoffset: 0;
+  }
+}
+
+.yellowline {
+  top: 44%;
+  transform: translate(-130%,0);
+}
+
+.yellowline-path {
+  stroke-dasharray: 700;
+  stroke-dashoffset: -700;
+  transition: all 2.3s; 
+  &.draw {
+    stroke-dashoffset: 0;
+  }
+}
+
+.orangeline {
+  top: 30%;
+}
+
+.orangeline-path {
+  stroke-dasharray: 605;
+  stroke-dashoffset: -605;
+  transition: all 2.1s; 
+  &.draw {
+    stroke-dashoffset: 0;
+  }
+}
+
+.greenline {
+  top: 38%;
+}
+
+.greenline-path {
+  stroke-dasharray: 605;
+  stroke-dashoffset: -605;
+  transition: all 1.6s; 
+  &.draw {
+    stroke-dashoffset: 0;
+  }
+}
+
+.about {
+  max-width: 600px;
+
+  .h3 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+}
+
+.limit-width {
+  width: columns(6);
+  margin: 0 auto;
+}
+
+/*----Graduate Section-----*/
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: stretch;
+}
+
+.graduates {
+  padding-top: 50px;
+}
+
+.graduate-wrapper {
+  padding: 20px;
+
+  .btn {
+    align-self: flex-end;
+  }
+}
+
+.details {
+  .h3 {
+    margin-top: 5px;
+    font-size: 20px;
+    display: inline-block;
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .portfolio-url {
+    font-size: 14px;
+    color:#9f9f9f;
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: $yellow;
+      transition: width 0.3s;
+    }
+
+    &:hover {
+      color:#444;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.bio {
+  p {
+    font-size: 16px;
+    color:#8b8b8b;
+    line-height: 1.6em;
+    margin-top: 1rem;
+  }
+}
+
+.category {
+  font-size: 14px;
+  color:#8b8b8b;
+  padding: 8px 0;
+
+  span, .pin {
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  span {
+    margin-left: 8px;
+  }
+}
+
+.web-design {
+  .project-name {
+    color: $orange;
+  }
+
+  .category-pin {
+    fill: $orange;
+  }
+}
+
+.product-brand-design {
+  .project-name {
+    color: $turq;
+  }
+
+  .category-pin {
+    fill: $turq;
+  }
+}
+
+.modal {
+  width: columns(6);
+  border-left: 10px solid transparent;
+  padding: 50px;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.7s;
+  z-index: 15;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.open ~ .overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* modal category classes */
+
+  &.web-design {
+    border-left: 100px solid $orange;
+  }
+
+  &.product-brand-design {
+    border-left: 10px solid $turq;
+  }
+}
+
+
+
+
+.modal-content {
+  color:#8b8b8b;
+  padding-bottom: 3rem;
+}
+
+.modal-title {
+
+  .project-title {
+    display: inline-block;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    float: right;
+    margin-top: 20px;
+    display: none;
+
+    &.has-url {
+      display: inline-block;
+    }
+  }
+}
+
+.overlay {
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.7s;
+}
+
