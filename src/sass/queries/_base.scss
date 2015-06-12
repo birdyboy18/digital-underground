@@ -366,7 +366,7 @@ MAIN STYLES
   width: 110%;
 
   svg{
-    transform: translateY(24%);
+    transform: translate(3%,24%);
   }
 }
 
@@ -380,8 +380,8 @@ MAIN STYLES
 }
 
 .turqline-path {
-  stroke-dasharray: 605;
-  stroke-dashoffset: -605;
+  stroke-dasharray: 625;
+  stroke-dashoffset: -625;
   transition: all 1.5s; 
   &.draw {
     stroke-dashoffset: 0;
@@ -398,17 +398,17 @@ MAIN STYLES
 }
 
 .orangeline-path {
-  stroke-dasharray: 605;
-  stroke-dashoffset: -605;
-  transition: all 2.1s; 
+  stroke-dasharray: 665;
+  stroke-dashoffset: -665;
+  transition: all 2.5s; 
   &.draw {
     stroke-dashoffset: 0;
   }
 }
 
 .greenline-path {
-  stroke-dasharray: 605;
-  stroke-dashoffset: -605;
+  stroke-dasharray: 665;
+  stroke-dashoffset: -665;
   transition: all 1.6s; 
   &.draw {
     stroke-dashoffset: 0;
