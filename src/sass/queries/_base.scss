@@ -245,6 +245,8 @@ MAIN STYLES
 .hero {
   width: 100%;
   min-height: 100%;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .slant-bottom-left {
@@ -304,8 +306,68 @@ MAIN STYLES
   transform: translate(129%,0);
 }
 
+.right_lines{
+  right: 0;
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  transform: translateY(calc(-5% - 3rem));
+  overflow: hidden;
+}
+
+.left_lines{
+  left: -10%;
+  position: absolute;
+  width: 55%;
+  height: 100%;
+  transform: translateY(calc(-5% - 3rem));
+}
+
+.trainlines{
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+  height: auto;
+  
+  svg{
+    width: 100%;
+    height: auto;
+  }
+}
+
 .redline {
-  top: 33%;
+  svg{
+    transform: translateY(-50%);
+  }
+}
+
+.turqline {
+  svg{
+    transform: translateY(42%);
+  }
+}
+
+.yellowline {
+  svg{
+    transform: translateY(51%);
+  }
+}
+
+.orangeline {
+  width: 110%;
+
+  svg{
+    transform: translateY(-50%);
+  }
+}
+
+.greenline {
+  width: 110%;
+
+  svg{
+    transform: translateY(24%);
+  }
 }
 
 .redline-path {
@@ -317,10 +379,6 @@ MAIN STYLES
   }
 }
 
-.turqline {
-  top: 42%;
-}
-
 .turqline-path {
   stroke-dasharray: 605;
   stroke-dashoffset: -605;
@@ -328,11 +386,6 @@ MAIN STYLES
   &.draw {
     stroke-dashoffset: 0;
   }
-}
-
-.yellowline {
-  top: 44%;
-  transform: translate(-130%,0);
 }
 
 .yellowline-path {
@@ -344,10 +397,6 @@ MAIN STYLES
   }
 }
 
-.orangeline {
-  top: 30%;
-}
-
 .orangeline-path {
   stroke-dasharray: 605;
   stroke-dashoffset: -605;
@@ -355,10 +404,6 @@ MAIN STYLES
   &.draw {
     stroke-dashoffset: 0;
   }
-}
-
-.greenline {
-  top: 38%;
 }
 
 .greenline-path {
