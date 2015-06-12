@@ -21,7 +21,7 @@ function add_scripts() {
   wp_deregister_script('jquery');
   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js", false, true);
   //Load in a main js folder with no depedancies, no version and added in the footer
-  wp_register_script('main', get_stylesheet_directory_uri() . '/js/main.js', array('jquery'), null, true);
+  wp_register_script('main', get_stylesheet_directory_uri() . '/js/bundle.js', array('jquery'), null, true);
   wp_enqueue_script('main');
 }
 
