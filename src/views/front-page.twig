@@ -86,8 +86,8 @@
 <section class="section--padded background--off-white slant-top-right-slant-bottom-left">
 	<div class="container">
 		<h1 class="h3 text--grey align-center limit-width">Meet the Class of BA (Hons) Digital Media Design 2015</h1>
-		<div class="graduates flex">
-			{% for student in students %}
+		<div class="graduates flex" id="graduates" type="text/x-handlebars-template">
+			{# {% for student in students %}
 				<div class="third graduate-wrapper {{ student.categories[0].slug }}">
 					<div class="category">
 						<?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -112,7 +112,35 @@
 					</div>
 					<a href="#" data-didactic="{{ student.project_description }}" data-title="{{ student.project_name }}" data-url="{{ student.project_url }}" data-category="{{ student.categories[0].slug }}" class="btn btn--yellow js-button">About their Project</a>
 				</div>
-			{% endfor %}
+			{% endfor %} #}
+			{% raw %}
+			{{#graduates}}
+				<div class="third graduate-wrapper {{ categories.0.slug }}">
+					<div class="category">
+						<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+						<svg class="pin" width="19px" height="30px" viewBox="0 0 19 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+						    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+						        <g id="digital-underground-website" sketch:type="MSArtboardGroup" transform="translate(-167.000000, -1735.000000)">
+						            <g class="category-pin" id="user-profile---moose" sketch:type="MSLayerGroup" transform="translate(167.000000, 1735.000000)" fill="#FFBE7E">
+						                <path d="M9.5,28 C12.5,27.9999981 19,14.7467054 19,9.5 C19,4.25329462 14.7467054,0 9.5,0 C4.25329462,0 0,4.25329462 0,9.5 C0,14.7467054 6.5,28.0000017 9.5,28 Z M9.5,15.5 C12.8137087,15.5 15.5,12.8137087 15.5,9.5 C15.5,6.18629134 12.8137087,3.5 9.5,3.5 C6.18629134,3.5 3.5,6.18629134 3.5,9.5 C3.5,12.8137087 6.18629134,15.5 9.5,15.5 Z" id="Oval-2" sketch:type="MSShapeGroup"></path>
+						            </g>
+						        </g>
+						    </g>
+						</svg>
+						<span>{{{ categories.0.name }}}</span>
+					</div>
+					<img src="{{ thumbnail }}" alt="{{ title }}">
+					<div class="details">
+						<p class="h3 text--grey">{{ title }} <a href="http://{{ portfolio_url }}" class="portfolio-url" target="_blank"> {{ portfolio_url }}</a></p>
+						<p class="project-name">{{ project_name }}</p>
+					</div>
+					<div class="bio">
+						{{{ content }}}
+					</div>
+					<a href="#" data-didactic="{{{ project_description }}}" data-title="{{ project_name }}" data-url="{{ project_url }}" data-category="{{ categories.0.slug }}" class="btn btn--yellow js-button">About their Project</a>
+				</div>
+			{{/graduates}}
+			{% endraw %}
 		</div>
 	</div>
 </section>
