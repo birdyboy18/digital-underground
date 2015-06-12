@@ -54,5 +54,23 @@ overlay.on('click', function(e){
 	}
 });
 
+//trying out the wp-api
+
+var request = require('superagent');
+
+var base = 'http://' + window.location.host + '/wp-json/';
+
+request
+.get(base + 'posts')
+.query({ 'type': 'student'})
+.query({ 'page': '3' })
+.query({ 'filter[posts_per_page]': '1'})
+.set('Content-Type', 'application/json')
+.end(function(err,res){
+	if (res.ok) {
+		console.log(res.body);
+	}
+})
+
 
 })(jQuery);
