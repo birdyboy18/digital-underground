@@ -57,20 +57,55 @@ overlay.on('click', function(e){
 //trying out the wp-api
 
 var request = require('superagent');
+var Handlebars = require('handlebars');
+
+Handlebars.registerHelper('html_decoder', function(text) {
+  var str = unescape(text).replace(/&amp;/g, '&');
+
+  var div = document.createElement('div');
+  div.innerHTML = str;
+  return div.firstChild.nodeValue; 
+});
+
+var graduatesSource = $('#graduates').html();
+var template = Handlebars.compile(graduatesSource);
 
 var base = 'http://' + window.location.host + '/wp-json/';
+
+var Data = {
+	graduates: []
+};
 
 request
 .get(base + 'posts')
 .query({ 'type': 'student'})
-.query({ 'page': '3' })
-.query({ 'filter[posts_per_page]': '1'})
+.query({ 'page': '0' })
+.query({ 'filter[posts_per_page]': '12'})
+.query({ 'filter[orderby]': 'rand'})
 .set('Content-Type', 'application/json')
 .end(function(err,res){
 	if (res.ok) {
-		console.log(res.body);
+		res.body.map(function(data){
+			Data.graduates.push({
+				title: data.title,
+				status: data.status,
+				content: data.content,
+				project_name: data.acf.project_name,
+				project_description: data.acf.project_description,
+				portfolio_url: data.acf.portfolio_url,
+				project_url: data.acf.project_url,
+				thumbnail: data.featured_image.source,
+				categories: data.terms.category
+			});
+		});
+		//now we've got all the graduates and pushed them into an array, lets render them
+		var rendered = template(Data);
+		
+		$('#graduates').html(rendered);
 	}
-})
+});
+
+
 
 
 })(jQuery);
