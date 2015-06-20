@@ -86,7 +86,7 @@
 <section class="section--padded background--off-white slant-top-right-slant-bottom-left">
 	<div class="container">
 		<h1 class="h3 text--grey align-center limit-width">Meet the Class of BA (Hons) Digital Media Design 2015</h1>
-		<div class="graduates flex" id="graduates" type="text/x-handlebars-template">
+		<div class="graduates flex" id="graduates">
 			{# {% for student in students %}
 				<div class="third graduate-wrapper {{ student.categories[0].slug }}">
 					<div class="category">
@@ -113,6 +113,7 @@
 					<a href="#" data-didactic="{{ student.project_description }}" data-title="{{ student.project_name }}" data-url="{{ student.project_url }}" data-category="{{ student.categories[0].slug }}" class="btn btn--yellow js-button">About their Project</a>
 				</div>
 			{% endfor %} #}
+			<script id="graduates-template" type="text/x-handlebars-template">
 			{% raw %}
 			{{#graduates}}
 				<div class="third graduate-wrapper {{ categories.0.slug }}">
@@ -141,7 +142,10 @@
 				</div>
 			{{/graduates}}
 			{% endraw %}
+			</script>
 		</div>
+		<a href="#" class="btn btn--yellow left js-prev">Prev</a>
+		<a href="#" class="btn btn--yellow right js-next">Next</a>
 	</div>
 </section>
 <section class="section--padded">
