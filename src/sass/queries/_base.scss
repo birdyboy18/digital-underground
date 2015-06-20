@@ -64,7 +64,6 @@ html, body {
   margin: 0 0 0 0;
   height: 100%;
   width: 100%;
-  font-size: $base-font-size;
   line-height: $base-line-height;
 }
 
@@ -242,6 +241,11 @@ BUTTON STYLES
 MAIN STYLES
 =================================*/
 
+
+html, body{
+  font-size: 90%;
+}
+
 .hero {
   width: 100%;
   min-height: 100%;
@@ -250,31 +254,32 @@ MAIN STYLES
 }
 
 .slant-bottom-left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .slant-top-right {
-  clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 100%);
 }
 
 .slant-top-right-slant-bottom-left {
-  clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
 }
 
 .logo {
-  width: 485px;
+  max-width: 485px;
+  width: 90%;
   pointer-events: none;
 }
 
 .intro {
   position: absolute;
-  top:45%;
+  top:50%;
   left: 50%;
   transform: translate(-50%,-50%);
   padding-top: 160px;
 
   p {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.5em;
     width: 70%;
     margin-left: auto;
@@ -283,13 +288,12 @@ MAIN STYLES
 
   .btn {
     text-align: center;
-    width: columns(3);
   }
 }
 
 .absolute-center {
   position: absolute;
-  top:50%;
+  top:45%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
@@ -307,20 +311,11 @@ MAIN STYLES
 }
 
 .right_lines{
-  right: 0;
-  position: absolute;
-  width: 45%;
-  height: 100%;
-  transform: translateY(-5%);
-  overflow: hidden;
+ display: none
 }
 
 .left_lines{
-  left: -10%;
-  position: absolute;
-  width: 55%;
-  height: 100%;
-  transform: translateY(-5%);
+ display: none
 }
 
 .trainlines{
@@ -419,11 +414,11 @@ MAIN STYLES
   max-width: 600px;
 
   .h3 {
-    font-size: 28px;
+    font-size: 1.75rem
   }
 
   p {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.5em;
   }
 }
@@ -457,7 +452,7 @@ MAIN STYLES
 .details {
   .h3 {
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 1.25rem;
     display: inline-block;
   }
   p {
@@ -465,7 +460,7 @@ MAIN STYLES
     margin-top: 0;
   }
   .portfolio-url {
-    font-size: 14px;
+    font-size: 0.875rem;
     color:#9f9f9f;
     display: inline-block;
     margin-left: 5px;
@@ -495,7 +490,7 @@ MAIN STYLES
 
 .bio {
   p {
-    font-size: 16px;
+    font-size: 1rem;
     color:#8b8b8b;
     line-height: 1.6em;
     margin-top: 1rem;
@@ -503,7 +498,7 @@ MAIN STYLES
 }
 
 .category {
-  font-size: 14px;
+  font-size: 0.875rem;
   color:#8b8b8b;
   padding: 8px 0;
 

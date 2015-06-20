@@ -1,0 +1,50 @@
+html, body{
+	font-size: 100%;
+}
+
+.full {
+  width: columns(12);
+}
+
+.half {
+  width: columns(6);
+}
+
+.third {
+  width: columns(6);
+}
+
+.quarter {
+  width: columns(6);
+}
+
+.slant-bottom-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.slant-top-right {
+  clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+}
+
+.slant-top-right-slant-bottom-left {
+  clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+}
+
+.right_lines{
+  right: 0;
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  transform: translateY(-5%);
+  overflow: hidden;
+  display: block;
+}
+
+.left_lines{
+  left: -10%;
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  transform: translateY(-5%);
+  display: block;
+}

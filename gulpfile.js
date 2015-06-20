@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
+	rubySass = require('gulp-ruby-sass');
 	autoprefixer = require('gulp-autoprefixer'),
 	csso = require('gulp-csso'),
 	imagemin = require('gulp-imagemin'),
@@ -11,6 +12,13 @@ var gulp = require('gulp'),
 gulp.task('sass', function() {
 	return gulp.src('./src/sass/style.scss')
 	.pipe(sass())
+	.pipe(autoprefixer())
+	.pipe(csso())
+	.pipe(gulp.dest('../digital-underground/css/'));
+});
+
+gulp.task('dan-sass', function() {
+	return rubySass('./src/sass/style.scss')
 	.pipe(autoprefixer())
 	.pipe(csso())
 	.pipe(gulp.dest('../digital-underground/css/'));
@@ -38,7 +46,7 @@ gulp.task('sequence', function(cb){
 });
 
 gulp.task('watch', function() {
-	gulp.watch('./src/sass/**/*.scss', ['sass']);
+	gulp.watch('./src/sass/**/*.scss', ['dan-sass']);
 	gulp.watch('./src/views/**/*.twig', ['copy']);
 	gulp.watch('./src/js/*.js', ['sequence']);
 	gulp.watch('./src/*.php', ['copy']);

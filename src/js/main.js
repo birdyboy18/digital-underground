@@ -71,9 +71,6 @@ $('.js-next').on('click', function(e){
 		renderTemplate(template, results, function(html){
 			$('#graduates').html(html);
 			attachListeners($('.js-button'));
-		});
-	});
-});
 
 $('.js-prev').on('click', function(e){
 	e.preventDefault();
