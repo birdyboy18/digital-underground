@@ -273,17 +273,18 @@ html, body{
 
 .intro {
   position: absolute;
-  top:50%;
+  top: calc(50% + 5rem);
   left: 50%;
+  width: 100%;
   transform: translate(-50%,-50%);
-  padding-top: 160px;
+  max-width: 28rem;
 
   p {
     font-size: 1.25rem;
     line-height: 1.5em;
-    width: 70%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 1rem;
   }
 
   .btn {
@@ -424,7 +425,7 @@ html, body{
 }
 
 .limit-width {
-  width: columns(6);
+  width: columns(10);
   margin: 0 auto;
 }
 
@@ -439,6 +440,14 @@ html, body{
 
 .graduates {
   padding-top: 50px;
+}
+
+.js-prev{
+  margin-left: 20px;
+}
+
+.js-next{
+  margin-right: 20px;
 }
 
 .graduate-wrapper {
@@ -533,18 +542,20 @@ html, body{
 }
 
 .modal {
-  width: columns(6);
+  width: 90%;
   border-left: 10px solid transparent;
-  padding: 50px;
+  padding: 2rem 1rem 1rem;
   position: fixed;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top:5%;
+  left:5%;
   background: #fff;
   visibility: hidden;
   opacity: 0;
   transition: all 0.7s;
   z-index: 15;
+  max-height: 90%;
+  overflow: auto;
+  word-wrap: break-word;
 
   &.open {
     visibility: visible;
