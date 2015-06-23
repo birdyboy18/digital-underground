@@ -64,7 +64,6 @@ html, body {
   margin: 0 0 0 0;
   height: 100%;
   width: 100%;
-  font-size: $base-font-size;
   line-height: $base-line-height;
 }
 
@@ -242,6 +241,11 @@ BUTTON STYLES
 MAIN STYLES
 =================================*/
 
+
+html, body{
+  font-size: 90%;
+}
+
 .hero {
   width: 100%;
   min-height: 100%;
@@ -250,46 +254,47 @@ MAIN STYLES
 }
 
 .slant-bottom-left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .slant-top-right {
-  clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 100%);
 }
 
 .slant-top-right-slant-bottom-left {
-  clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
 }
 
 .logo {
-  width: 485px;
+  max-width: 485px;
+  width: 90%;
   pointer-events: none;
 }
 
 .intro {
   position: absolute;
-  top:45%;
+  top: calc(50% + 5rem);
   left: 50%;
+  width: 100%;
   transform: translate(-50%,-50%);
-  padding-top: 160px;
+  max-width: 28rem;
 
   p {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.5em;
-    width: 70%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 1rem;
   }
 
   .btn {
     text-align: center;
-    width: columns(3);
   }
 }
 
 .absolute-center {
   position: absolute;
-  top:50%;
+  top:45%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
@@ -307,20 +312,11 @@ MAIN STYLES
 }
 
 .right_lines{
-  right: 0;
-  position: absolute;
-  width: 45%;
-  height: 100%;
-  transform: translateY(-5%);
-  overflow: hidden;
+ display: none
 }
 
 .left_lines{
-  left: -10%;
-  position: absolute;
-  width: 55%;
-  height: 100%;
-  transform: translateY(-5%);
+ display: none
 }
 
 .trainlines{
@@ -419,17 +415,17 @@ MAIN STYLES
   max-width: 600px;
 
   .h3 {
-    font-size: 28px;
+    font-size: 1.75rem
   }
 
   p {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.5em;
   }
 }
 
 .limit-width {
-  width: columns(6);
+  width: columns(10);
   margin: 0 auto;
 }
 
@@ -446,6 +442,14 @@ MAIN STYLES
   padding-top: 50px;
 }
 
+.js-prev{
+  margin-left: 20px;
+}
+
+.js-next{
+  margin-right: 20px;
+}
+
 .graduate-wrapper {
   padding: 20px;
 
@@ -457,7 +461,7 @@ MAIN STYLES
 .details {
   .h3 {
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 1.25rem;
     display: inline-block;
   }
   p {
@@ -465,7 +469,7 @@ MAIN STYLES
     margin-top: 0;
   }
   .portfolio-url {
-    font-size: 14px;
+    font-size: 0.875rem;
     color:#9f9f9f;
     display: inline-block;
     margin-left: 5px;
@@ -495,7 +499,7 @@ MAIN STYLES
 
 .bio {
   p {
-    font-size: 16px;
+    font-size: 1rem;
     color:#8b8b8b;
     line-height: 1.6em;
     margin-top: 1rem;
@@ -503,7 +507,7 @@ MAIN STYLES
 }
 
 .category {
-  font-size: 14px;
+  font-size: 0.875rem;
   color:#8b8b8b;
   padding: 8px 0;
 
@@ -538,18 +542,20 @@ MAIN STYLES
 }
 
 .modal {
-  width: columns(6);
+  width: 90%;
   border-left: 10px solid transparent;
-  padding: 50px;
+  padding: 2rem 1rem 1rem;
   position: fixed;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top:5%;
+  left:5%;
   background: #fff;
   visibility: hidden;
   opacity: 0;
   transition: all 0.7s;
   z-index: 15;
+  max-height: 90%;
+  overflow: auto;
+  word-wrap: break-word;
 
   &.open {
     visibility: visible;

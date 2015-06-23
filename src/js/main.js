@@ -28,6 +28,8 @@ overlay.on('click', function(e){
 		modal.removeClass('open');
 		modal.removeClass(prevCat);
 		urlBtn.removeClass('has-url');
+		$('body').css('overflow','auto');
+
 	}
 });
 
@@ -67,12 +69,13 @@ $('.js-next').on('click', function(e){
 	e.preventDefault();
 	checkCurrentPage('increment');
 
+
 	paginate(graduates, skip, config.posts_per_page, function(results){
 		renderTemplate(template, results, function(html){
 			$('#graduates').html(html);
 			attachListeners($('.js-button'));
-		});
-	});
+		})
+	})
 });
 
 $('.js-prev').on('click', function(e){
@@ -92,7 +95,7 @@ $('.js-prev').on('click', function(e){
 * Provides a callback with all the results so you can use them.
 */
 function getResults(cb) {
-	var base = 'http://' + window.location.host + '/wp-json/';
+	var base = 'http://' + window.location.host + '/digital-underground/wp-json/';
 
 	var Data = {
 		graduates: []
@@ -146,6 +149,7 @@ function attachListeners(el) {
 		var categoryClass = $(this).attr('data-category');
 
 		modal.addClass('open');
+		$('body').css('overflow','hidden');
 		modalContent.html(didactic);
 		projectTitle.html(title);
 

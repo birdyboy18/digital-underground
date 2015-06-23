@@ -14,3 +14,20 @@
 .quarter {
   width: columns(3);
 }
+
+.right_lines{
+  right: 0;
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  transform: translateY(-5%);
+  overflow: hidden;
+}
+
+.left_lines{
+  left: -10%;
+  position: absolute;
+  width: 55%;
+  height: 100%;
+  transform: translateY(-5%);
+}
