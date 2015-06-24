@@ -44,7 +44,7 @@ var template = Handlebars.compile(graduatesSource);
 
 //query config
 var config = {
-	'posts_per_page': 3
+	'posts_per_page': 6
 }
 var currentPage = 0;
 var skip = currentPage*config.posts_per_page;
@@ -95,7 +95,7 @@ $('.js-prev').on('click', function(e){
 * Provides a callback with all the results so you can use them.
 */
 function getResults(cb) {
-	var base = 'http://' + window.location.host + '/digital-underground/wp-json/';
+	var base = 'http://' + window.location.host + '/wp-json/';
 
 	var Data = {
 		graduates: []

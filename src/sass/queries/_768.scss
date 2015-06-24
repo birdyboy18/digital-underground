@@ -59,11 +59,6 @@ html, body{
 	transform: translate(-50%,-50%);
 }
 
-.intro {
-  position: absolute;
-  top: calc(50% + 3rem);
-}
-
 .limit-width {
   width: columns(6);
   margin: 0 auto;
