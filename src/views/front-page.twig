@@ -80,10 +80,10 @@
 	<div class="container align-center about">
 		<h1 class="text--grey h3">About the Show</h1>
 		<p class="text--l_grey">The graduates of BA (Hons) Digital Media Design 2015 invite you to come view our work on July 16th 2015. Experience an exhibition show so awesome, you won’t know where to stop first.</p>
-		<a href="#" class="btn btn--yellow btn--block-btn-3-col">Meet the Students</a>
+		<a href="#students" class="btn btn--yellow btn--block-btn-3-col">Meet the Students</a>
 	</div>
 </section>
-<section class="section--padded background--off-white slant-top-right-slant-bottom-left">
+<section id="students" class="section--padded background--off-white slant-top-right-slant-bottom-left">
 	<div class="container">
 		<h1 class="h3 text--grey align-center limit-width">Meet the Class of BA (Hons) Digital Media Design 2015</h1>
 		<div class="graduates flex" id="graduates">
@@ -132,7 +132,9 @@
 					</div>
 					<img src="{{ thumbnail }}" alt="{{ title }}">
 					<div class="details">
-						<p class="h3 text--grey">{{ title }} <a href="http://{{ portfolio_url }}" class="portfolio-url" target="_blank"> {{ portfolio_url }}</a></p>
+						<p class="h3 text--grey">{{ title }} </p>
+						<br>
+						<a href="http://{{ portfolio_url }}" class="portfolio-url" target="_blank"> {{ portfolio_url }}</a>
 						<p class="project-name">{{ project_name }}</p>
 					</div>
 					<div class="bio">

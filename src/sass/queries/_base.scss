@@ -254,15 +254,15 @@ html, body{
 }
 
 .slant-bottom-left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 100%);
 }
 
 .slant-top-right {
-  clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 2%, 100% 100%, 0% 100%);
 }
 
 .slant-top-right-slant-bottom-left {
-  clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 2%, 100% 98%, 0% 100%);
 }
 
 .logo {
@@ -453,6 +453,11 @@ html, body{
 .graduate-wrapper {
   padding: 20px;
 
+  img{
+    width: 100%;
+    height: auto;
+  }
+
   .btn {
     align-self: flex-end;
   }
@@ -472,7 +477,7 @@ html, body{
     font-size: 0.875rem;
     color:#9f9f9f;
     display: inline-block;
-    margin-left: 5px;
+    // margin-left: 5px;
     position: relative;
 
     &:before {
