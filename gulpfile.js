@@ -45,6 +45,10 @@ gulp.task('sequence', function(cb){
 	runSequence('scripts', 'copy', cb);
 });
 
+gulp.task('remote', function(cb){
+	runSequence('scripts','sass','copy');
+})
+
 gulp.task('watch', function() {
 	gulp.watch('./src/sass/**/*.scss', ['dan-sass']);
 	gulp.watch('./src/views/**/*.twig', ['copy']);

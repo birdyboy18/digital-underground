@@ -205,6 +205,11 @@ function checkCurrentPage(option) {
 	}
 }
 
+$(document).on('keypress',function(e){
+	if ( ( e.which === 77 ) && ( e.which === 65 ) && ( e.which === 84 ) ) {
+	 	$('.graduate-wrapper img').attr("src","http://digitalunderground.co/wp-content/themes/digital-underground/assets/secrets.png")
+	}
+})
 
 
 
