@@ -205,11 +205,16 @@ function checkCurrentPage(option) {
 	}
 }
 
-$(document).on('keypress',function(e){
-	if ( ( e.which === 77 ) && ( e.which === 65 ) && ( e.which === 84 ) ) {
-	 	$('.graduate-wrapper img').attr("src","http://digitalunderground.co/wp-content/themes/digital-underground/assets/secrets.png")
-	}
-})
+if ( window.addEventListener ) {
+        var kkeys = [], konami = "77,65,84,84"; //this spells dinner
+        window.addEventListener("keydown", function(e){
+                kkeys.push( e.keyCode );
+                if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+                    // run code here    
+                    $('.graduate-wrapper img').attr("src","http://digitalunderground.co/wp-content/themes/digital-underground/assets/secrets.png");
+                }
+        }, true);
+}
 
 
 
