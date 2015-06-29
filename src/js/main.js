@@ -178,6 +178,19 @@ function paginate(data, skip, posts_per_page, cb) {
 	} else {
 		results.graduates = data.graduates.slice(skip,limit);
 	}
+
+	if (skip == 0){
+		$('.js-prev').hide();
+	} else {
+		$('.js-prev').show();
+	}
+
+	if (skip >= total / posts_per_page){
+		$('.js-next').hide();
+	} else {
+		$('.js-next').show();
+	}
+	console.log(nextButton);
 	
 	cb(results);
 
