@@ -185,12 +185,11 @@ function paginate(data, skip, posts_per_page, cb) {
 		$('.js-prev').show();
 	}
 
-	if (skip >= total / posts_per_page){
+	if (currentPage >= total / posts_per_page - 1){
 		$('.js-next').hide();
 	} else {
 		$('.js-next').show();
 	}
-	console.log(nextButton);
 	
 	cb(results);
 
