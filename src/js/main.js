@@ -44,7 +44,7 @@ var template = Handlebars.compile(graduatesSource);
 
 //query config
 var config = {
-	'posts_per_page': 6
+	'posts_per_page': 3
 }
 var currentPage = 0;
 var skip = currentPage*config.posts_per_page;

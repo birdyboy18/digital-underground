@@ -180,6 +180,15 @@ LAYOUT HELPERS
   float: right;
 }
 
+.janky-center{
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 200px;
+  text-align: center;
+}
+
 .align-center {
   text-align: center;
 }
@@ -477,7 +486,7 @@ html, body{
     font-size: 0.875rem;
     color:#9f9f9f;
     display: inline-block;
-    // margin-left: 5px;
+    //margin-left: 5px;
     position: relative;
 
     &:before {
@@ -526,23 +535,87 @@ html, body{
   }
 }
 
-.web-design {
+.web {
   .project-name {
     color: $orange;
   }
 
-  .category-pin {
+  .category .pin path {
     fill: $orange;
   }
 }
 
-.product-brand-design {
+.branding {
   .project-name {
     color: $turq;
   }
 
-  .category-pin {
+  .category .pin path {
     fill: $turq;
+  }
+}
+
+.games {
+  .project-name {
+    color: $yellow;
+  }
+
+  .category .pin path {
+    fill: $yellow;
+  }
+}
+
+.graphic-product-design {
+  .project-name {
+    color: #F25366;
+  }
+
+  .category .pin path {
+    fill: #F25366;
+  }
+}
+
+.installations {
+  .project-name {
+    color: #B8E986;
+  }
+
+  .category .pin path {
+    fill: #B8E986;
+  }
+}
+
+.mobile {
+  .project-name {
+    color: #A64FDC;
+  }
+
+  .category .pin path{
+    fill: #A64FDC;
+  }
+}
+
+.other {
+  .project-name {
+    color: #4FB4DC;
+  }
+
+  .category .pin path {
+    fill: #4FB4DC;
+  }
+}
+
+.back_fixed{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 1.5rem;
+  background-color: rgba(white, 0.7);
+  padding: 1rem;
+
+  a{
+    color: black;
   }
 }
 

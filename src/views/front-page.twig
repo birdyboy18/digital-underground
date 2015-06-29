@@ -72,7 +72,7 @@
 	</div>
 	<div class="intro">
 		<p class="text--white align-center">You're Invited to join the BA (Hons) Digital Media Design 2015 Graduate Exhibition Show</p>
-		<p class="align-center"><a href="#" class="btn btn--yellow">Grab a Ticket</a></p>
+		<p class="align-center"><a href="#event" class="btn btn--yellow">Grab a Ticket</a></p>
 	</div>
 
 </section>
@@ -87,32 +87,6 @@
 	<div class="container">
 		<h1 class="h3 text--grey align-center limit-width">Meet the Class of BA (Hons) Digital Media Design 2015</h1>
 		<div class="graduates flex" id="graduates">
-			{# {% for student in students %}
-				<div class="third graduate-wrapper {{ student.categories[0].slug }}">
-					<div class="category">
-						<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-						<svg class="pin" width="19px" height="30px" viewBox="0 0 19 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-						    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-						        <g id="digital-underground-website" sketch:type="MSArtboardGroup" transform="translate(-167.000000, -1735.000000)">
-						            <g class="category-pin" id="user-profile---moose" sketch:type="MSLayerGroup" transform="translate(167.000000, 1735.000000)" fill="#FFBE7E">
-						                <path d="M9.5,28 C12.5,27.9999981 19,14.7467054 19,9.5 C19,4.25329462 14.7467054,0 9.5,0 C4.25329462,0 0,4.25329462 0,9.5 C0,14.7467054 6.5,28.0000017 9.5,28 Z M9.5,15.5 C12.8137087,15.5 15.5,12.8137087 15.5,9.5 C15.5,6.18629134 12.8137087,3.5 9.5,3.5 C6.18629134,3.5 3.5,6.18629134 3.5,9.5 C3.5,12.8137087 6.18629134,15.5 9.5,15.5 Z" id="Oval-2" sketch:type="MSShapeGroup"></path>
-						            </g>
-						        </g>
-						    </g>
-						</svg>
-						<span>{{ student.categories[0] }}</span>
-					</div>
-					<img src="{{ student.thumbnail }}" alt="{{ student.title }}">
-					<div class="details">
-						<p class="h3 text--grey">{{ student.title }} <a href="http://{{ student.portfolio_url }}" class="portfolio-url" target="_blank"> {{ student.portfolio_url }}</a></p>
-						<p class="project-name">{{ student.project_name }}</p>
-					</div>
-					<div class="bio">
-						{{ student.content }}
-					</div>
-					<a href="#" data-didactic="{{ student.project_description }}" data-title="{{ student.project_name }}" data-url="{{ student.project_url }}" data-category="{{ student.categories[0].slug }}" class="btn btn--yellow js-button">About their Project</a>
-				</div>
-			{% endfor %} #}
 			<script id="graduates-template" type="text/x-handlebars-template">
 			{% raw %}
 			{{#graduates}}
@@ -147,12 +121,17 @@
 			</script>
 		</div>
 		<a href="#" class="btn btn--yellow left js-prev">Prev</a>
+		<a href="{{ site.url }}/students" class="btn btn--yellow janky-center">View all students</a>
 		<a href="#" class="btn btn--yellow right js-next">Next</a>
 	</div>
 </section>
-<section class="section--padded">
+<section class="section--padded" id="event">
 	<div class="container">
 		<h1 class="h3 text--grey align-center limit-width">Come join us in Bournemouth</h1>
+		<br>
+		<div style="width:100%; text-align:left;" >
+		  <iframe src="http://newsletters.bournemouth.ac.uk/t/8TY-3HGVF-5SVGBY-1NI7AM-1/c.aspx" frameborder="0" height="256" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+		</div>
 	</div>
 </section>
 {% endblock %}
